@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #1d4316;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    </style>
+  </head>
+<body class="w3-white">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <!--<img src="https://www.w3schools.com/w3images/avatar_smoke.jpg" style="width:100%">-->
+  <img src="./public/Alume 2024-12-05.png" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+</a>
+<a href="#betalen" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <i class="fa fa-credit-card w3-xxlarge"></i>
+  <p>BETALEN</p>
+</a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+  <a href="#route" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-solid fa-car w3-xxlarge"></i>
+    <p>ROUTE</p>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#home" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#betalen" class="w3-bar-item w3-button" style="width:25% !important">BETALEN</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+    <a href="#route" class="w3-bar-item w3-button" style="width:25% !important">ROUTE</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-MediumGrey" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small"></span>Brighten up your Life !</h1>
+    <p>op de workshop voor creatievelingen</p>
+   <!-- <img src="https://www.w3schools.com/w3images/man_smoke.jpg" alt="boy" class="w3-image" width="992" height="1108">-->
+   <!-- uitfaseren dice7  <img src="./assets/images/dice7.png" style="width:100%"> -->
+  </header>
+
+<!-- invoer code slide show caroussel-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(11, 109, 60, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="./public/Alume 2024-12-05.png" style="width:100%">
+  <div class="text">Foto Een</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="./assets/images/Pauw paint.png" style="width:100%">
+  <div class="text">Foto Twee</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="./assets/images/koppel twee WA0009.jpg" style="width:100%">
+  <div class="text">Foto Drie</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="./assets/images/koppel WA0008 (2).jpg" style="width:100%">
+  <div class="text">Foto Vier</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
+
+<!--invoer code einde-->
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-black">Het verhaal achter ons?</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>Veronique en Stefanie heten U hartelijk welkom op onze workshop voor creatievelingen. We streven ernaar om met onze creaties jouw omgeving op te fleuren. Gedreven door onze passie voor het creëeren van mooie voorwerpen en onze liefde voor
+      kleur, sfeer en licht zijn we samen een bijzonder project gestart met name het ontwerpen en creëeren van exclusieve lampen en lampenkappen.
+    </p>
+    <p>Naast onze kernactiviteit zijn we ook actief als weddingplanner en eventdesigners waarbij we bijvoorbeeld op bruiloften de bloemschikking en tafeldecoratie voor onze rekening nemen.
+
+    </p>
+    
+    <hr>
+    <hr>
+    <h2 class="w3-text-light-black">Onze aanpak</h2>
+    <p> Wij organiseren nu voor enthousiaste creatievelingen een workshop waar je in minder dan drie uur de knepen van het vak onder de knie krijgt.
+      Je leert om te spelen met prachtige kleurrijke stoffen en een unieke lampekap samen te stellen waarna je die kan combineren, naar keuze, met unieke vazen en armaturen die wij voor jou hebben uitgekozen.
+
+      <h2 class="w3-text-light-black">Wat mag U verwachten?</h2>
+      <p> Tips en tricks voor een prachtig resultaat. U kan uw creativteit ten volle tot ontplooiing brengen. Stoffen, materialen en werktuigen liggen voor jou klaar.
+        En Last but not least, een hapje en een drankje ter afsluiting.
+
+
+
+
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    <p class="w3-wide">Kies een vaas naar keuze</p>
+    <div class="w3-white">
+      <div class="w3-green" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Ontwerp uw eigen lampekap</p>
+    <div class="w3-white">
+      <div class="w3-green" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Maak van uw vaas een unieke lampadair</p>
+    <div class="w3-white">
+      <div class="w3-green" style="height:28px;width:80%"></div>
+    </div><br>
+    <!--
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-green">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">11+</span><br>
+        Partners
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">55+</span><br>
+        Projects Done
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">89+</span><br>
+        Happy Clients
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">150+</span><br>
+        Meetings
+      </div>
+    </div>-->
+
+    <!--<button class="w3-button w3-light-green w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download uw workshop ticketnummer(voorlopig nog niet beschikbaar)
+    </button> -->
+    
+    <!-- Grid for pricing tables  Inschrijven -->
+
+    <!DOCTYPE html>
+<html>
+<head>
+<title>Font Awesome Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <!-- inschrijven en betalen link-->
+
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="betalen">
+ <!-- <button class="w3-button w3-light-green w3-padding-large w3-section"></button>-->
+    <h2 class="w3-text-light-black"></h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    
+
+
+
+
+<!-- invoeging  gekleurde knop-->
+   
+<!--einde invoeging-->
+
+
+<!--eind betalen link-->
+
+
+<h1>Inschrijven & Betalen voor de workshop</h1>
+
+<!--<i class="fa fa-credit-card"></i>
+<i class="fa fa-credit-card" style="font-size:24px"></i>
+<i class="fa fa-credit-card" style="font-size:36px"></i>-->
+<p> Betaling voor de workshop kan voorlopig alleen ter plaatse met Bancontact of Payconic.</p>
+<i class="fa fa-credit-card" style="font-size:48px;color:black"></i>
+<br>
+<hr>
+<!--<p>Betaling met creditkaart</p>-->
+</p>
+<p>De workshops gaan door op 11 januari van 14h tot 17h en op 22 januari van 19h tot 22h. De inschrijvingsbevestiging en de precieze locatie zal later via email
+  aan de deelnemerss worden toegestuurd.
+</p>
+<!--<button class="w3-button w3-light-green w3-padding-large w3-section"></button>-->
+<!--<button style="font: size 21px;">Betaal nu <i class="fa fa-credit-card"></i></button>-->
+
+</body>
+</html> 
+
+
+
+
+
+
+    <!--einde inschrijven-->
+
+
+
+
+
+
+
+    <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16">Workshop 1 beginner</li>
+          <li class="w3-padding-16">Begeleiding door een coach - Ideeën gids</li>
+          <li class="w3-padding-16">Gebruik van materialen, stoffen en werktuigen</li>
+          <li class="w3-padding-16">Mail ondersteuning</li>
+          <li class="w3-padding-16">
+            <h2>€75</h2>
+            <span class="w3-opacity">eenmalige prijs</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-green">Inschrijven</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-half">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-red w3-xlarge w3-padding-32">Pro - Niet beschikbaar</li>
+          <li class="w3-padding-16">Workshop 2 gevorderd</li>
+          <li class="w3-padding-16">Foto's</li>
+          <li class="w3-padding-16">Gratis gebruik materialen</li>
+          <li class="w3-padding-16">Ondersteuning en nazorg</li>
+          <li class="w3-padding-16">
+            <h2>€100</h2>
+            <span class="w3-opacity">eenmalige deelname</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-red">Inschrijven</button>
+          </li>
+        </ul>
+      </div>
+    <!-- End Grid/Pricing tables -->
+    </div>
+
+
+
+
+
+
+
+
+
+    
+    <!-- Testimonials -->
+    <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
+    <img src="./assets/images/stefanie 162429.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Stefanie</span>- Marketing gedreven met een passie voor creativiteit</p>
+    <p></p><br>
+    <hr>
+    <hr>
+    <img src="./assets/images/vero een.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Veronique</span>- Organisator en creatieve didactische coach en oprichter van Mel-Vé.</p>
+    <p></p>
+  <!-- End About Section -->
+  </div>
+  
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-black">Onze realisaties</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="./assets/images/delftsblauw - kopie.jpg" style="width:100%">
+        <img src="./assets/images/lampadair 2024-12-12 141054.png" style="width:100%">
+        <img src="./assets/images/zonnebloem.jpg" style="width:100%">
+      </div>
+
+      <div class="w3-half">
+        <img src="assets/images/lampekap WA0000 (1).png" style="width:100%">
+        <img src="assets/images/draaivaas - kopie.jpg" style="width:100%">
+        <img src="assets/images/realisaties-WA0007 (1).jpg" style="width:100%">
+        <img src="public/achtergrond WA0010 (1).png" style="width:100%">
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-zwart">Contacteer Mij</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Eke, België</p>
+      <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Gsm: +32 477 34 34 20</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i>  Email:vero.dejaeger@hotmail.com</p>
+    </div><br>
+    <p>Let's get in touch. Plaats een bestelling of schrijf je in voor de workshop</p>
+
+    <!--<form action="/action_page.php" target="_blank">-->
+      <!--form action werd omgewisseld-->
+    <form target="_blank" action="https://formsubmit.co/werner43092@gmail.com" method="POST">
+
+    <!--nieuw code invoer voor backend-->
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Naam" required name="Naam"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message & referentienummer artikel" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-green w3-padding-large w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i>  VERSTUREN</p>
+         
+
+
+    </form>
+    
+   <!--nieuw invoer voor formsubmit om te testen 1 jan - te verwijderen nadien CSS ontbreekt-->
+
+  
+
+
+     <!-- nog niet verwijderd-->
+
+
+    <!--einde invoer van form submit 1 jan-->
+
+  <!-- End Contact Section -->
+   <!--begin route section-->
+  </div>
+  <div class="w3-padding-64 w3-content w3-text-grey" id="route">
+    <h2 class="w3-text-light-Black">Routebeschrijving</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+  </div>
+<!-- >Begin google maps section-->
+<!-- Example Google Maps Link -->
+
+<div class="w3-container w3-padding-32 w3-center w3-white" id="ROUTE">
+  <hr style="width:200px" class="w3-opacity">
+<a href ="https://www.google.com/maps/place/Kerkplein,+9810+Nazareth/@50.9560705,3.6388752,17z/data=!3m1!4b1!4m6!3m5!1s0x47c372b2ce1d0707:0xefc05fa40beec04b!8m2!3d50.9560705!4d3.6414555!16s%2Fg%2F1td41ng7?entry=ttu&g_ep=EgoyMDI0MTIwOS4wIKXMDSoASAFQAw%3D%3D">Kaart Routebeschrijving</a>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Routebeschrijving</title>
+
+</head>
+<body>
+ 
+  
+</body>
+</html>
+
+<!--nieuwe invoer -->
+
+<!--<div class="w3-padding-64 w3-content w3-text-grey" id="route">
+  <h2 class="w3-text-light-grey">Route</h2>
+  <hr style="width:200px" class="w3-opacity">
+
+  <div class="w3-section">
+    <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Routebeschrijving</p>
+    
+  </div><br>
+  <p>--</p>
+
+
+<!- einde google maps section-->
+
+
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+ <p class="w3-small">This website was made by Kvantesprang Kvadrat BV</p>
+
+ <!-- End footer -->
+</footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>
+
